@@ -23,9 +23,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookDaoImpl extends C3P0Utils implements BookDao {
-    private static final String FINDAll = "select * from book;";
-    private static final String FINDBy_bookName = "select * from books where bookName like '%'|| ? ||'%';";
-    private static final String FINDBy_isbn = "select * from books where isbn=?";
+    private static String FINDAll = "select * from books;";
+    private static String FINDBy_bookName = "select * from books where bookName like ?;";
+    private static String FINDBy_isbn = "select * from books where isbn=?";
 
     @Override
     public List<Book> findAll ( ) {
@@ -34,7 +34,7 @@ public class BookDaoImpl extends C3P0Utils implements BookDao {
         Object[] param = new Object[] { };
         try {
             list = new QueryRunner(super.getDataSource()).query(
-                    super.getConnection(),
+                    conn,
                     FINDAll,
                     new BeanListHandler<>(Book.class),
                     param
@@ -46,13 +46,15 @@ public class BookDaoImpl extends C3P0Utils implements BookDao {
         return list;
     }
     @Override
-    public List<Book> findByBookName ( String bookName ) throws SQLException {
+    public List<Book> findByBookName ( String bookName ) {
         List<Book> list = new ArrayList<>( );
         Connection conn = super.getConnection();
-        Object[] param = new Object[] { };
+        Object[] param = new Object[] {
+                "%"+bookName+"%"
+        };
         try {
             list = new QueryRunner(super.getDataSource()).query(
-                    super.getConnection(),
+                    conn,
                     FINDBy_bookName,
                     new BeanListHandler<>(Book.class),
                     param
@@ -67,10 +69,12 @@ public class BookDaoImpl extends C3P0Utils implements BookDao {
     public Book findByIsbn ( String isbn ) {
         Book book = null;
         Connection conn = super.getConnection();
-        Object[] param = new Object[] { };
+        Object[] param = new Object[] {
+                isbn
+        };
         try {
             book = new QueryRunner(super.getDataSource()).query(
-                    super.getConnection(),
+                    conn,
                     FINDBy_isbn,
                     new BeanHandler<>(Book.class),
                     param

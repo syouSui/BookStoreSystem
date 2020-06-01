@@ -18,7 +18,7 @@ public interface BookDao {
 
     public List<Book> findAll ( );
 
-    public List<Book> findByBookName ( String bookName ) throws SQLException;
+    public List<Book> findByBookName ( String bookName );
 
     public Book findByIsbn ( String isbn );
 
