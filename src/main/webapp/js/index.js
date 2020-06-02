@@ -1,7 +1,7 @@
 /*
  * @Author      : acmaker
  * @Date        : 2020-05-30 20:56:08
- * @LastEditTime: 2020-05-31 22:17:04
+ * @LastEditTime: 2020-06-02 22:19:45
  * @FilePath    : \webapp\js\index.js
  * @Website     : http://csdn.acmaker.vip
  * @Description : 
@@ -15,6 +15,9 @@ $('input[name="findAll"').click(function () {
         },
         function (response) {
             $('#showAll_box').html("");
+            $('#showAll_box').append(
+                '<div>全部图书查询结果如下: </div>'
+            );
             $.each(JSON.parse(response.data), function (i, v) {
                 $('#showAll_box').append(
                     '<div id="all' + i + '">' +
@@ -23,7 +26,7 @@ $('input[name="findAll"').click(function () {
                     '<span id="all' + i + '_bookName">' +
                     v.bookName + "</span>" +
                     '<span id="all' + i + '_publisherId">' +
-                    v.publisherId + "</span>" +
+                    v.publisherID + "</span>" +
                     '<span id="all' + i + '_price">' +
                     v.price + "</span> " +
                     '<span id="all' + i + '_count">' +
@@ -50,6 +53,9 @@ $('input[name="find_bookName"').click(function () {
         },
         function (response) {
             $('#showItem_box').html("");
+            $('#showItem_box').append(
+                '<div>与书名 "' + $('input[name="text_bookName"]').val() + ' "有关的查询结果如下：</div>'
+            )
             $.each(JSON.parse(response.data), function (i, v) {
                 $('#showItem_box').append(
                     '<div id="item' + i + '">' +
@@ -58,7 +64,7 @@ $('input[name="find_bookName"').click(function () {
                     '<span id="item' + i + '_bookName">' +
                     v.bookName + "</span>" +
                     '<span id="item' + i + '_publisherId">' +
-                    v.publisherId + "</span>" +
+                    v.publisherID + "</span>" +
                     '<span id="item' + i + '_price">' +
                     v.price + "</span> " +
                     '<span id="item' + i + '_count">' +
@@ -85,6 +91,9 @@ $('input[name="find_isbn"').click(function () {
         },
         function (response) {
             $('#showItem_box').html("");
+            $('#showItem_box').append(
+                '<div>与书号 "' + $('input[name="text_isbn"]').val() + ' "查询结果如下：</div>'
+            );
             let i = 0;
             let v = JSON.parse(response.data);
             $('#showItem_box').append(
@@ -94,7 +103,7 @@ $('input[name="find_isbn"').click(function () {
                 '<span id="item' + i + '_bookName">' +
                 v.bookName + "</span>" +
                 '<span id="item' + i + '_publisherId">' +
-                v.publisherId + "</span>" +
+                v.publisherID + "</span>" +
                 '<span id="item' + i + '_price">' +
                 v.price + "</span> " +
                 '<span id="item' + i + '_count">' +

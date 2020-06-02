@@ -25,7 +25,7 @@ public class BookController extends HttpServlet {
         String str_method = request.getParameter( "method" );
         try {
             Method method = BookService.class.getMethod( str_method, HttpServletRequest.class, HttpServletResponse.class );
-            method.invoke( new BookService(), request, response );
+            method.invoke( new BookService( ), request, response );
         } catch ( NoSuchMethodException e ) {
             e.printStackTrace( );
         } catch ( IllegalAccessException e ) {

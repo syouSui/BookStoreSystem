@@ -1,7 +1,7 @@
 /*
  * @Author      : acmaker
  * @Date        : 2020-05-30 20:56:08
- * @LastEditTime: 2020-05-31 22:17:04
+ * @LastEditTime: 2020-06-02 21:10:29
  * @FilePath    : \webapp\js\index.js
  * @Website     : http://csdn.acmaker.vip
  * @Description : 
@@ -23,7 +23,7 @@ $('input[name="findAll"').click(function () {
                     '<span id="all' + i + '_bookName">' +
                     v.bookName + "</span>" +
                     '<span id="all' + i + '_publisherId">' +
-                    v.publisherId + "</span>" +
+                    v.publisherID + "</span>" +
                     '<span id="all' + i + '_price">' +
                     v.price + "</span> " +
                     '<span id="all' + i + '_count">' +
@@ -58,7 +58,7 @@ $('input[name="find_bookName"').click(function () {
                     '<span id="item' + i + '_bookName">' +
                     v.bookName + "</span>" +
                     '<span id="item' + i + '_publisherId">' +
-                    v.publisherId + "</span>" +
+                    v.publisherID + "</span>" +
                     '<span id="item' + i + '_price">' +
                     v.price + "</span> " +
                     '<span id="item' + i + '_count">' +
@@ -94,7 +94,7 @@ $('input[name="find_isbn"').click(function () {
                 '<span id="item' + i + '_bookName">' +
                 v.bookName + "</span>" +
                 '<span id="item' + i + '_publisherId">' +
-                v.publisherId + "</span>" +
+                v.publisherID + "</span>" +
                 '<span id="item' + i + '_price">' +
                 v.price + "</span> " +
                 '<span id="item' + i + '_count">' +
