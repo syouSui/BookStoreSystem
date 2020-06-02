@@ -2,74 +2,87 @@
 /*
  *@Author      : acmaker
  *@Date        : 2020-05-30 20:56:18
- *@LastEditTime: 2020-06-02 21:45:09
+ *@LastEditTime: 2020-06-02 22:46:16
  *@FilePath    : \webapp\css\index.css
  *@Website     : http://csdn.acmaker.vip
  *@Description : 
 */
 
 
+html {
+  height: 100%;
+  background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+}
+
 #container {
-  width: 50vw;
+  width: 60vw;
   margin: 2vh 24vw 0 24vw;
 }
 
 #caption {
-  margin-bottom: 1vh;
+  margin: 0 auto 4vh auto;
   text-align: center;
+  font-size: 4em;
 }
 
 input[name="findAll"] {
-  margin-left: 2vw;
+  margin-left: 1vw;
 }
 
 input[name="text_bookName"] {
-  margin-left: 3vw;
+  margin-left: 10vw;
 }
 
 input[name="text_isbn"] {
-  margin-left: 3vw;
+  margin-left: 10vw;
 }
 
-#showAll_box_des{
+#showAll_box_des {
   margin: 4vh 0 2vh 0;
 }
+
+#showAll_box {
+  /* margin-top: 1vh; */
+}
+
+#showItem_box {
+  margin-top: 5vh;
+}
+
+
 
 #showAll_box_des span,
 #showItem_box span,
 #showAll_box span {
-  display:inline-block;
+  display: inline-block;
   margin: 1em 1em 0 1em;
 }
 
 span[id*="isbn"] {
-  width:5em;
+  width: 5em;
+  color: red;
 }
 
 span[id*="bookName"] {
-  width:12em;
+  width: 12em;
 }
 
 span[id*="publisher"] {
-  width:6em;
-  color:red;
+  width: 8em;
 }
 
 span[id*="price"] {
-  width:4em;
-  color:red;
+  width: 4em;
 }
 
 span[id*="count"] {
-  width:4em;
-  color:red;
+  width: 4em;
 }
+
 span[id*="description"] {
-  width:8em;
-  color:red;
+  width: 12em;
 }
 
 span[id*="pic"] {
-  width:10em;
-  color:red;
+  width: 10em;
 }

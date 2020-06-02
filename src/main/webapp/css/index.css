@@ -2,12 +2,17 @@
 /*
  *@Author      : acmaker
  *@Date        : 2020-05-30 20:56:18
- *@LastEditTime: 2020-06-02 21:59:55
+ *@LastEditTime: 2020-06-02 22:46:16
  *@FilePath    : \webapp\css\index.css
  *@Website     : http://csdn.acmaker.vip
  *@Description : 
 */
 
+
+html {
+  height: 100%;
+  background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+}
 
 #container {
   width: 60vw;
@@ -17,6 +22,7 @@
 #caption {
   margin: 0 auto 4vh auto;
   text-align: center;
+  font-size: 4em;
 }
 
 input[name="findAll"] {
@@ -34,9 +40,11 @@ input[name="text_isbn"] {
 #showAll_box_des {
   margin: 4vh 0 2vh 0;
 }
+
 #showAll_box {
   /* margin-top: 1vh; */
 }
+
 #showItem_box {
   margin-top: 5vh;
 }

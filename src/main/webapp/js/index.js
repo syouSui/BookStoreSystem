@@ -1,7 +1,7 @@
 /*
  * @Author      : acmaker
  * @Date        : 2020-05-30 20:56:08
- * @LastEditTime: 2020-06-02 22:19:45
+ * @LastEditTime: 2020-06-02 22:55:04
  * @FilePath    : \webapp\js\index.js
  * @Website     : http://csdn.acmaker.vip
  * @Description : 
@@ -119,4 +119,12 @@ $('input[name="find_isbn"').click(function () {
             $('#showItem_box').append(" Error ");
         }
     )
+});
+
+$('input[name="text_bookName').bind('keypress', function (e) {
+    $('input[name="find_bookName"').click();
+});
+
+$('input[name="text_isbn').bind('keypress', function (e) {
+    $('input[name="find_isbn"').click();
 });
