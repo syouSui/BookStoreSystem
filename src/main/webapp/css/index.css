@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/*
+ *@Author      : acmaker
+ *@Date        : 2020-05-30 20:56:18
+ *@LastEditTime: 2020-06-02 09:33:02
+ *@FilePath    : \webapp\css\index.css
+ *@Website     : http://csdn.acmaker.vip
+ *@Description : 
+*/
+
+
+#container {
+  width: 40vw;
+  margin: 2vh auto 0 auto;
+}
+
+#caption {
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+input[name="findAll"] {
+  margin-left:2vw;
+}
+input[name="text_bookName"] {
+  margin-left:3vw;
+}
+input[name="text_isbn"] {
+  margin-left:3vw;
+}
+
+#showAll_box_des{
+  margin:1vh;
+}
+
+#showAll_box_des span,
+#showAll_box span,
+#showItem_box span {
+  width: 1vw;
+  margin: 1vw;
+}

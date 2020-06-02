@@ -23,9 +23,8 @@ import java.lang.reflect.Method;
 public class BookController extends HttpServlet {
     protected void doPost ( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         String str_method = request.getParameter( "method" );
-        Method method;
         try {
-            method = BookService.class.getMethod( str_method, HttpServletRequest.class,HttpServletResponse.class );
+            Method method = BookService.class.getMethod( str_method, HttpServletRequest.class, HttpServletResponse.class );
             method.invoke( new BookService(), request, response );
         } catch ( NoSuchMethodException e ) {
             e.printStackTrace( );
