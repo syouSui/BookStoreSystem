@@ -1,7 +1,7 @@
 /*
  * @Author      : acmaker
  * @Date        : 2020-05-30 20:56:08
- * @LastEditTime: 2020-06-06 22:22:49
+ * @LastEditTime: 2020-06-07 00:25:12
  * @FilePath    : \webapp\js\index.js
  * @Website     : http://csdn.acmaker.vip
  * @Description : 
@@ -19,7 +19,7 @@ $('input[name="findAll"').click(function () {
         function (response) {
             $('#box').html("");
             $('#box').append(
-                '<div id="info" class="bg-success text-left lead">全部图书查询结果如下: </div><br/>'
+                '<div id="info" class="bg-success text-left lead" style="margin-top:5vh">全部图书查询结果如下: </div><br/>'
             );
             $('#box').append(
                 '<div id="show_box" class="row">' +
@@ -32,7 +32,7 @@ $('input[name="findAll"').click(function () {
                     '<div id="item' + i + '"class="col-lg-3 item_handle">' +
                     '<span id="isbn_' + i + '" style="display:none">' + v.isbn + '</span>' +
                     '<a id="a_' + i + '" href="javascript:void(0)">' +
-                    '<img class="img-rounded img-responsive" src="' + v.pic + '"/>' +
+                    '<div>' + '<img class="img-rounded img-responsive" src="' + v.pic + '"/>' + '</div>' +
                     '<p class="bg-primary text-center lead">' + v.bookName + '</p>' +
                     '<p class="bg-warning text-center lead ">' + v.description + '</p>' +
                     '</a>' +
@@ -63,7 +63,7 @@ $('input[name="findAll"').click(function () {
                             $('#show_box').append(
                                 '<div id="item' + i + ' class="row">' +
                                 '<div id="item' + i + '_pic">' +
-                                '<img class="img-rounded img-responsive center-block" src="' + v.pic + '"/>' + '</div>' +
+                                '<div>' + '<img class="img-rounded img-responsive center-block" src="' + v.pic + '" style="margin-bottom:2vh;"/>' + '</div>' + '</div>' +
                                 '<div id="item' + i + '_bookName" class="col-md-4 text-primary">' +
                                 '书名: ' + v.bookName + '</div>' +
                                 '<div id="item' + i + '_price" class="col-md-4 text-danger">' +
@@ -76,6 +76,7 @@ $('input[name="findAll"').click(function () {
                                 '出版社编号: ' + v.publisherID + '</div>' +
                                 '<div id="item' + i + '_count" class="col-md-4 text-success">' +
                                 "数量: " + v.count + "</div>" +
+                                '<button id="add_cart" class="btn btn-warning btn-lg active col-md-2 col-md-offset-9" name="add_cart" style="margin-top:3vh;" > 加入购物车</button>' +
                                 '</div>'
                             )
                         },
@@ -99,36 +100,10 @@ $('input[name="find_bookName"').click(function () {
             "method": "findByBookName",
             "bookName": $('input[name="text_bookName"]').val()
         },
-        // function (response) {
-        //     $('#showItem_box').html("");
-        //     $('#showItem_box').append(
-        //         '<div>与书名 "' + $('input[name="text_bookName"]').val() + ' "有关的查询结果如下：</div>'
-        //     )
-        //     $.each(JSON.parse(response.data), function (i, v) {
-        //         $('#showItem_box').append(
-        //             '<div id="item' + i + '">' +
-        //             '<span id="item' + i + '_isbn">' +
-        //             v.isbn + "</span>" +
-        //             '<span id="item' + i + '_bookName">' +
-        //             v.bookName + "</span>" +
-        //             '<span id="item' + i + '_publisherId">' +
-        //             v.publisherID + "</span>" +
-        //             '<span id="item' + i + '_price">' +
-        //             v.price + "</span> " +
-        //             '<span id="item' + i + '_count">' +
-        //             v.count + "</span>" +
-        //             '<span id="item' + i + '_description">' +
-        //             v.description + "</span>" +
-        //             '<span id="item' + i + '_pic">' +
-        //             v.pic + "</span>" +
-        //             '</div'
-        //         );
-        //     })
-        // },
         function (response) {
             $('#box').html("");
             $('#box').append(
-                '<div id="info" class="bg-success text-left lead">与书名 "' + $('input[name="text_bookName"]').val() + ' "有关的查询结果如下： </div><br/>'
+                '<div id="info" class="bg-success text-left lead" style="margin-top:5vh" >与书名 "' + $('input[name="text_bookName"]').val() + ' "有关的查询结果如下： </div><br/>'
             );
             $('#box').append(
                 '<div id="show_box" class="row">' +
@@ -141,7 +116,7 @@ $('input[name="find_bookName"').click(function () {
                     '<div id="item' + i + '"class="col-lg-3 item_handle">' +
                     '<span id="isbn_' + i + '" style="display:none">' + v.isbn + '</span>' +
                     '<a id="a_' + i + '" href="javascript:void(0)">' +
-                    '<img class="img-rounded img-responsive" src="' + v.pic + '"/>' +
+                    '<div>' + '<img class="img-rounded img-responsive" src="' + v.pic + '"/>' + '</div>' +
                     '<p class="bg-primary text-center lead">' + v.bookName + '</p>' +
                     '<p class="bg-warning text-center lead ">' + v.description + '</p>' +
                     '</a>' +
@@ -172,7 +147,7 @@ $('input[name="find_bookName"').click(function () {
                             $('#show_box').append(
                                 '<div id="item' + i + ' class="row">' +
                                 '<div id="item' + i + '_pic">' +
-                                '<img class="img-rounded img-responsive center-block" src="' + v.pic + '"/>' + '</div>' +
+                                '<div>' + '<img class="img-rounded img-responsive center-block" src="' + v.pic + '" style="margin-bottom:2vh;"/>' + '</div>' + '</div>' +
                                 '<div id="item' + i + '_bookName" class="col-md-4 text-primary">' +
                                 '书名: ' + v.bookName + '</div>' +
                                 '<div id="item' + i + '_price" class="col-md-4 text-danger">' +
@@ -185,6 +160,7 @@ $('input[name="find_bookName"').click(function () {
                                 '出版社编号: ' + v.publisherID + '</div>' +
                                 '<div id="item' + i + '_count" class="col-md-4 text-success">' +
                                 "数量: " + v.count + "</div>" +
+                                '<button id="add_cart" class="btn btn-warning btn-lg active col-md-2 col-md-offset-9" name="add_cart" style="margin-top:3vh;" > 加入购物车</button>' +
                                 '</div>'
                             )
                         },
@@ -222,7 +198,7 @@ $('input[name="find_isbn"').click(function () {
             $('#show_box').append(
                 '<div id="item' + i + ' class="row">' +
                 '<div id="item' + i + '_pic">' +
-                '<img class="img-rounded img-responsive center-block" src="' + v.pic + '"/>' + '</div>' +
+                '<div>' + '<img class="img-rounded img-responsive center-block" src="' + v.pic + '" style="margin-bottom:2vh;"/>' + '</div>' + '</div>' +
                 '<div id="item' + i + '_bookName" class="col-md-4 text-primary">' +
                 '书名: ' + v.bookName + '</div>' +
                 '<div id="item' + i + '_price" class="col-md-4 text-danger">' +
@@ -235,6 +211,7 @@ $('input[name="find_isbn"').click(function () {
                 '出版社编号: ' + v.publisherID + '</div>' +
                 '<div id="item' + i + '_count" class="col-md-4 text-success">' +
                 "数量: " + v.count + "</div>" +
+                '<button id="add_cart" class="btn btn-warning btn-lg active col-md-2 col-md-offset-9" name="add_cart" style="margin-top:3vh;" > 加入购物车</button>' +
                 '</div>'
             )
         },

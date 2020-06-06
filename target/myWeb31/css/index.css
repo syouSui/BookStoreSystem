@@ -2,7 +2,7 @@
 /*
  *@Author      : acmaker
  *@Date        : 2020-05-30 20:56:18
- *@LastEditTime: 2020-06-06 22:10:53
+ *@LastEditTime: 2020-06-07 00:48:23
  *@FilePath    : \webapp\css\index.css
  *@Website     : http://csdn.acmaker.vip
  *@Description : 
@@ -21,6 +21,10 @@ h6 {
   font-family: Microsoft YaHei, '宋体', Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 }
 
+html {
+  background-image: ('https://image--bed.oss-cn-qingdao.aliyuncs.com/image--bed--PicGo/bush.png?x-oss-process=image') !important;
+}
+
 #shopping_cart {
   margin-top: 5vh !important;
 }
@@ -28,10 +32,6 @@ h6 {
 #caption {
   margin-top: 1vh !important;
   margin-bottom: 2vh !important;
-}
-
-#info {
-  margin-top: 5vh;
 }
 
 .item_handle {
@@ -60,5 +60,5 @@ div {
 }
 
 #box {
-  margin-top:3vh;
+  margin-top: 3vh !important;
 }
