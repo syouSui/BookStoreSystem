@@ -3,6 +3,7 @@
 一个以前后端分离思想架构的web项目，因为比较小，于是直接把前端塞到了webapp目录。
 
 # 预览
+数据库布置在阿里云上，操作起来就比较方便了。
 ![]( https://image--bed.oss-cn-qingdao.aliyuncs.com/image--bed--PicGo/20200607042918.png?x-oss-process=image)
 
 # 数据库设计
