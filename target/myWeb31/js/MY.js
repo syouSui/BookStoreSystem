@@ -1,7 +1,7 @@
 /*
  * @Author      : acmaker
  * @Date        : 2020-05-31 14:49:27
- * @LastEditTime: 2020-05-31 20:15:28
+ * @LastEditTime: 2020-06-06 20:57:20
  * @FilePath    : \webapp\js\MY.js
  * @Website     : http://csdn.acmaker.vip
  * @Description : 
@@ -30,5 +30,5 @@ var MY = {
                 withCredentials: true
             }
         });
-    }
+    },
 }

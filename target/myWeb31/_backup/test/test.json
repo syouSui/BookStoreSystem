@@ -1,0 +1,13 @@
+{
+    "code":"1",
+    "message":"hello",
+    "data":{
+        "isbn":"121",
+        "bookName":"hhhhhh",
+        "publisherId":"212",
+        "price":"8.8",
+        "count":"11",
+        "description":"test",
+        "pic":"url"
+    }
+}

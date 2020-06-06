@@ -33,7 +33,7 @@ public class BookService {
                         bookDao.findAll( )
                 ).toJSON( )
         );
-        System.out.println( "yes" );
+        System.out.println( "findAll" );
     }
 
     public void findByIsbn ( HttpServletRequest request, HttpServletResponse response ) throws IOException {
@@ -44,7 +44,7 @@ public class BookService {
                         bookDao.findByIsbn( request.getParameter( "isbn" ) )
                 ).toJSON( )
         );
-        System.out.println( "yes" );
+        System.out.println( "findIsbn" );
     }
 
     public void findByBookName ( HttpServletRequest request, HttpServletResponse response ) throws IOException {
@@ -56,6 +56,6 @@ public class BookService {
                         bookDao.findByBookName( request.getParameter( "bookName" ) )
                 ).toJSON( )
         );
-        System.out.println( "yes" );
+        System.out.println( "findByBookName" );
     }
 }
