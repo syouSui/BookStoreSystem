@@ -2,7 +2,7 @@
 /*
  *@Author      : acmaker
  *@Date        : 2020-05-30 20:56:18
- *@LastEditTime: 2020-06-07 01:21:41
+ *@LastEditTime: 2020-06-07 04:26:29
  *@FilePath    : \webapp\css\index.css
  *@Website     : http://csdn.acmaker.vip
  *@Description : 
@@ -23,18 +23,28 @@ h6 {
   font-family: 'Segoe UI', Tahoma, Helvetica, Arial, Microsoft YaHei, '宋体', "\5b8b\4f53", sans-serif;
 }
 
-/* html, */
 .bg {
   background-image: url('https://image--bed.oss-cn-qingdao.aliyuncs.com/image--bed--PicGo/bush.png?x-oss-process=image');
 }
 
 #caption h1 {
   font-size: 450%;
-  margin-bottom: 3vh;
+  margin-bottom: 5vh;
 }
 
 #shopping_cart {
   margin-top: 2vh !important;
+}
+
+ul {
+  width:500px;
+  height:90vh;
+  padding-top:2vh !important;
+  padding-bottom: 5vh !important;
+}
+
+li {
+  margin: 2vh !important;
 }
 
 #caption {
@@ -48,7 +58,7 @@ h6 {
 
 .item_handle img {
   height: 25rem !important;
-  height: 100%;
+  width: 100% !important;
 }
 
 .item_handle p {
@@ -56,6 +66,7 @@ h6 {
 }
 
 img {
+  /* margin-bottom:0!important; */
   transition: 1s all;
 }
 
@@ -63,14 +74,11 @@ img:hover {
   transform: scale(1.1);
 }
 
-div {
-  overflow: hidden !important;
-}
-
 #box {
   margin-top: 3vh !important;
 }
 
 #box div {
-  text-align:center;
+  text-align: center;
+  overflow: hidden !important;
 }

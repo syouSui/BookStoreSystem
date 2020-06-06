@@ -1,7 +1,7 @@
 /*
  * @Author      : acmaker
  * @Date        : 2020-05-30 20:56:08
- * @LastEditTime: 2020-06-07 00:25:12
+ * @LastEditTime: 2020-06-07 01:28:32
  * @FilePath    : \webapp\js\index.js
  * @Website     : http://csdn.acmaker.vip
  * @Description : 
@@ -19,7 +19,7 @@ $('input[name="findAll"').click(function () {
         function (response) {
             $('#box').html("");
             $('#box').append(
-                '<div id="info" class="bg-success text-left lead" style="margin-top:5vh">全部图书查询结果如下: </div><br/>'
+                '<div id="info" class="bg-info text-left lead" style="margin-top:1vh">全部图书查询结果如下: </div><br/>'
             );
             $('#box').append(
                 '<div id="show_box" class="row">' +
@@ -32,7 +32,7 @@ $('input[name="findAll"').click(function () {
                     '<div id="item' + i + '"class="col-lg-3 item_handle">' +
                     '<span id="isbn_' + i + '" style="display:none">' + v.isbn + '</span>' +
                     '<a id="a_' + i + '" href="javascript:void(0)">' +
-                    '<div>' + '<img class="img-rounded img-responsive" src="' + v.pic + '"/>' + '</div>' +
+                    '<div>' + '<img class="img-rounded img-responsive center-block" src="' + v.pic + '"/>' + '</div>' +
                     '<p class="bg-primary text-center lead">' + v.bookName + '</p>' +
                     '<p class="bg-warning text-center lead ">' + v.description + '</p>' +
                     '</a>' +
@@ -61,7 +61,7 @@ $('input[name="findAll"').click(function () {
                             let i = 0;
                             let v = JSON.parse(response.data);
                             $('#show_box').append(
-                                '<div id="item' + i + ' class="row">' +
+                                '<div id="item' + i + ' class="row" style="font-size:200%;">' +
                                 '<div id="item' + i + '_pic">' +
                                 '<div>' + '<img class="img-rounded img-responsive center-block" src="' + v.pic + '" style="margin-bottom:2vh;"/>' + '</div>' + '</div>' +
                                 '<div id="item' + i + '_bookName" class="col-md-4 text-primary">' +
@@ -103,7 +103,7 @@ $('input[name="find_bookName"').click(function () {
         function (response) {
             $('#box').html("");
             $('#box').append(
-                '<div id="info" class="bg-success text-left lead" style="margin-top:5vh" >与书名 "' + $('input[name="text_bookName"]').val() + ' "有关的查询结果如下： </div><br/>'
+                '<div id="info" class="bg-info text-left lead" style="margin-top:1vh" >与书名 "' + $('input[name="text_bookName"]').val() + ' "有关的查询结果如下： </div><br/>'
             );
             $('#box').append(
                 '<div id="show_box" class="row">' +
@@ -116,7 +116,7 @@ $('input[name="find_bookName"').click(function () {
                     '<div id="item' + i + '"class="col-lg-3 item_handle">' +
                     '<span id="isbn_' + i + '" style="display:none">' + v.isbn + '</span>' +
                     '<a id="a_' + i + '" href="javascript:void(0)">' +
-                    '<div>' + '<img class="img-rounded img-responsive" src="' + v.pic + '"/>' + '</div>' +
+                    '<div>' + '<img class="img-rounded img-responsive center-block" src="' + v.pic + '"/>' + '</div>' +
                     '<p class="bg-primary text-center lead">' + v.bookName + '</p>' +
                     '<p class="bg-warning text-center lead ">' + v.description + '</p>' +
                     '</a>' +
@@ -145,7 +145,7 @@ $('input[name="find_bookName"').click(function () {
                             let i = 0;
                             let v = JSON.parse(response.data);
                             $('#show_box').append(
-                                '<div id="item' + i + ' class="row">' +
+                                '<div id="item' + i + ' class="row" style="font-size:200%;">' +
                                 '<div id="item' + i + '_pic">' +
                                 '<div>' + '<img class="img-rounded img-responsive center-block" src="' + v.pic + '" style="margin-bottom:2vh;"/>' + '</div>' + '</div>' +
                                 '<div id="item' + i + '_bookName" class="col-md-4 text-primary">' +
@@ -196,7 +196,7 @@ $('input[name="find_isbn"').click(function () {
             let i = 0;
             let v = JSON.parse(response.data);
             $('#show_box').append(
-                '<div id="item' + i + ' class="row">' +
+                '<div id="item' + i + ' class="row" style="font-size:200%;">' +
                 '<div id="item' + i + '_pic">' +
                 '<div>' + '<img class="img-rounded img-responsive center-block" src="' + v.pic + '" style="margin-bottom:2vh;"/>' + '</div>' + '</div>' +
                 '<div id="item' + i + '_bookName" class="col-md-4 text-primary">' +
@@ -229,3 +229,4 @@ $('input[name="text_bookName').bind('keypress', function (e) {
 $('input[name="text_isbn').bind('keypress', function (e) {
     $('input[name="find_isbn"').click();
 });
+
