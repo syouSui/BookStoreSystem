@@ -93,7 +93,7 @@
 
 
   <build>
-    <finalName>myWeb31</finalName>
+    <finalName>BookStoreSystem</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
