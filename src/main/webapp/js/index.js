@@ -233,7 +233,17 @@ $('input[name="find_isbn"').click(function () {
                 "数量: " + v.count + "</div>" +
                 '<button id="add_cart" class="btn btn-warning btn-lg active col-md-2 col-md-offset-9" name="add_cart" style="margin-top:3vh;" > 加入购物车</button>' +
                 '</div>'
-            )
+            );
+            $('#add_cart').on({
+                click: function (e) {
+                    $('#shopping_cart_items').append(
+                        '<li>' +
+                        '<div style="display:inline-block;overflow:hidden;">' + '<img class="img-rounded " src="' + v.pic + '" style="width:100px;height:100px;"/>' + '</div>' + '</div>' +
+                        +'&emsp;&emsp;' + v.bookName + '</div>' +
+                        '</li>'
+                    );
+                }
+            })
         },
         function () {
             $('#box').append(" Error ");
